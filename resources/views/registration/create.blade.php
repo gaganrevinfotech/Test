@@ -2,9 +2,10 @@
 @section('content')
 <h2>Register</h2>
 <div class="links">
-    <a href="{{url('/register')}}">register</a>
-    <a href="{{url('/view-data')}}">users</a>
+    <a  class="btn btn-info"  href="{{url('/register')}}">register</a>
+    <a   class="btn btn-info"  href="{{url('/view-data')}}">users</a>
 </div>
+<br>
 
 {!! Form::open(array('route' => 'fileUpload','enctype' => 'multipart/form-data')) !!}
 

@@ -2,10 +2,10 @@
 @section('content')
 <h2>Register</h2>
 <div class="links">
-    <a href="{{url('/register')}}">register</a>
-    <a href="{{url('/view-data')}}">users</a>
+    <a  class="btn btn-info"  href="{{url('/register')}}">register</a>
+    <a   class="btn btn-info"  href="{{url('/view-data')}}">users</a>
 </div>
-
+<br>
 {!! Form::open(array('route' => 'fileUploadEdit','enctype' => 'multipart/form-data')) !!}
 
 <div class="form-group">
@@ -22,7 +22,7 @@
     <div class="col-md-4">
         {!! Form::file('image', array('class' => 'image','required' => 'required')) !!}
     </div>
-    <img width="100" src="<?php echo URL::to('/').'/images/'.$user->image ?>">
+    <img width="100" src="<?php echo URL::to('/').'/public/images/'.$user->image ?>">
 
 </div>
 <br>

@@ -25,12 +25,12 @@
 		$("table.transaction-table").DataTable({
 			responsive: true
 		});
-		function myFunction() {
-			if (confirm("Press a button!")) {
-				
-				return true;
-			} else{
-				
+		function myFunction(e) {
+			var baseUrl = window.location.protocol + "//" + window.location.host;
+			if (confirm('Are You Sure?')){
+				window.location = baseUrl+"/blog/destroy/"+e;
+			}else{
+				return false;
 			}
 		}
 	</script>
